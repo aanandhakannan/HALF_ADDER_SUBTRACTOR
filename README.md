@@ -1,18 +1,20 @@
-# HALF_ADDER_SUBTRACTOR
+EXP 3:HALF ADDER AND HALF SUBTRACTOR
 
-Implementation-of-Half-Adder-and-Half Subtractor-circuit
+NAME: AANANDHA KANNAN.S
 
-**AIM:**
+REF NO: 24900501
 
-To design a half adder and half subtractor circuit and verify its truth table in Quartus using Verilog programming.
+AIM
 
-**Equipments Required:**
+TO DESIGN HALF ADDER AND HALF SUBTRACTOR FOR CIRCUIT AND VEROFY ITS TRUTH TABLE IN QUARTUS USING VENILOG PROGRAMMING
+
+Equipments Required:
 
 Hardware – PCs, Cyclone II , USB flasher 
 
 Software – Quartus prime Theory Adders are digital circuits that carry out the addition of numbers.
 
-**Half Adder**
+HALF ADDER AND HALF SUBTRACTOR
 
 Half adder is a combinational circuit that performs simple addition of two binary numbers. The input variables designate the augend and addend bits; the output variables produce the sum and carry. It is necessary to specify two output variables because the result may consist of two binary digits.
 
@@ -31,9 +33,17 @@ Borrow = A’B
 
  ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
 
+
+ 
+
 Figure -02 HALF Subtractor
 
 **Truthtable**
+1) HALF ADDER
+![Screenshot 2024-12-08 222024](https://github.com/user-attachments/assets/54a34128-1b1a-4086-ae4c-2662587b16d2)
+2) HALF SUBTRACTOR
+![Screenshot 2024-12-08 222043](https://github.com/user-attachments/assets/8171ffe1-5fa9-45e0-9494-be3109d1ee66)
+
 
 **Procedure**
 
@@ -48,14 +58,69 @@ Figure -02 HALF Subtractor
 5.	For different input combinations generate the timing diagram.
 
 
+
 **Program:**
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+ 1) HALF ADDER
+module halfadd(a,b,sum,count);
 
-Developed by: RegisterNumber:*/
+input a,b;
+
+output sum,count;
+
+xor (sum,a,b);
+
+and (cout,a,b);
+
+endmodule
+
+2)HALF SUBTRACTOR
+module halfsub(a,b,diff,borr);
+
+input a,b;
+
+output diff,borr;
+
+wire w1;
+
+xor g1(diff,a,b);
+
+not g2(w1,a);
+
+and g3(borr,w1,b);
+
+endmodule 
+
+
+ 
+
 
 **RTL Schematic**
+1) HALF ADDER
+
+![HALF ADDER](https://github.com/user-attachments/assets/643b02aa-501d-434b-af53-4e3893c384f8)
+
+ 2)HALF SUBTRACTOR
+ 
+ ![Screenshot 2024-12-08 223541](https://github.com/user-attachments/assets/1ce4e924-721d-4197-8698-fa31fbc54486)
+
+
+
+ 
 
 **Output/TIMING Waveform**
+1) HALF ADDER
+
+![HA WF](https://github.com/user-attachments/assets/464b025b-6d30-4531-84bd-695eeb28205b)
+
+
+
+2)HALF SUBTRACTOR
+
+![HS WF](https://github.com/user-attachments/assets/aeda0477-ad39-484c-9273-b25c6661a16a)
+
+
 
 **Result:**
+THUS THE HALF ADDER AND HALF SUBTRACTOR CIRCUITS ARE DESIGNED AND TRUTH TRABLE IS VERIFIED USING QUARTUS SPOFTWARW
